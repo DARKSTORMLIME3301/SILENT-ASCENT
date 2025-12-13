@@ -1,0 +1,132 @@
+/* GENERAL */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #111;
+    border-bottom: 2px solid #5e17eb;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+header a:hover,
+header .active {
+    color: #5e17eb;
+}
+
+/* LOGO ANIMÉ */
+#logo h2 {
+    animation: pulseReiatsu 3s infinite ease-in-out;
+    text-shadow: 0 0 15px #5e17eb;
+}
+
+@keyframes pulseReiatsu {
+    0% { text-shadow: 0 0 10px #5e17eb; }
+    50% { text-shadow: 0 0 25px #5e17eb; }
+    100% { text-shadow: 0 0 10px #5e17eb; }
+}
+
+/* TITRE COMPLEMENTS */
+.complement-title {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.complement-title h1 {
+    font-size: 42px;
+    text-shadow: 0 0 15px #5e17eb;
+}
+
+.complement-title p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* COMPLEMENTS CARDS */
+.complements-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.complement-card {
+    background: #111;
+    border: 2px solid #5e17eb;
+    border-radius: 15px;
+    padding: 25px;
+    width: 250px;
+    box-shadow: 0 0 15px #5e17eb;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.complement-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 30px #5e17eb;
+}
+
+.complement-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.complement-card h3 {
+    color: #5e17eb;
+    font-size: 22px;
+    margin-bottom: 12px;
+    text-shadow: 0 0 10px #5e17eb;
+}
+
+.complement-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.95;
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    border-top: 2px solid #5e17eb;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .complement-card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .complement-card {
+        width: 90%;
+    }
+}

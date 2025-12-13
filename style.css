@@ -1,0 +1,642 @@
+/* Couleurs principales */
+:root {
+  --violet-aizen: #5e17eb;
+  --noir: #0a0a0a;
+  --blanc: #ffffff;
+  --gris-clair: #e7e7e7;
+}
+
+/* Reset simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--noir);
+  color: var(--blanc);
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  padding: 15px 40px;
+  background: rgba(10, 10, 10, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.logo-svg rect {
+  fill: var(--violet-aizen);
+  transition: 0.4s;
+}
+
+/* Animation logo au hover */
+.logo-svg:hover {
+  transform: scale(1.15) rotate(8deg);
+  transition: 0.4s ease;
+}
+
+/* Animation logo au clic */
+.logo-svg:active {
+  transform: scale(0.9) rotate(-5deg);
+}
+
+/* NAV */
+.nav a {
+  color: var(--blanc);
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 1.05rem;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--violet-aizen);
+  transition: 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #0a0a0a, #1a0f2e 40%, var(--violet-aizen));
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.cta {
+  padding: 12px 30px;
+  background: var(--violet-aizen);
+  color: var(--blanc);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: #4c12c7;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE TABLETTE */
+@media (max-width: 900px) {
+  .nav a {
+    margin-left: 15px;
+    font-size: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* RESPONSIVE TELEPHONE */
+@media (max-width: 600px) {
+  .header {
+    padding: 12px 20px;
+  }
+  .nav {
+    display: none; /* on peut activer un menu burger après */
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+
+.aizen-text {
+    font-size: 2.8rem;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0;
+    filter: blur(10px);
+    animation: aizenReveal 2.5s ease-out forwards;
+    text-shadow: 0 0 20px #5e17eb55;
+}
+
+@keyframes aizenReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(10px);
+    }
+    70% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+    100% {
+        transform: translateY(0);
+        text-shadow: 0 0 35px #5e17eb99;
+    }
+}
+
+
+        /* ---------------- GLOBAL ---------------- */
+        body {
+            margin: 0;
+            background-color: #0e0e0e;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            color: #5e17eb;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header {
+            width: 100%;
+            background: #000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #5e17eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Logo animé */
+        .logo {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #5e17eb;
+            letter-spacing: 2px;
+            animation: logoGlow 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes logoGlow {
+            0% { text-shadow: 0 0 5px #5e17eb; }
+            100% { text-shadow: 0 0 25px #5e17eb; }
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        /* Effet hover Aizen */
+        nav ul li:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ---------------- SECTION ACCUEIL ---------------- */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            max-width: 800px;
+            line-height: 1.3;
+            opacity: 0;
+            filter: blur(10px);
+            animation: aizenReveal 2.5s ease-out forwards;
+            text-shadow: 0 0 20px #5e17eb55;
+        }
+
+        @keyframes aizenReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+                filter: blur(10px);
+            }
+            70% {
+                opacity: 1;
+                filter: blur(0px);
+            }
+            100% {
+                transform: translateY(0);
+                text-shadow: 0 0 35px #5e17eb99;
+            }
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.4rem;
+            color: #dddddd;
+            opacity: 0;
+            animation: fadeIn 3.3s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+        @media(max-width: 768px) {
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+
+
+/* ---------------- VIDEO CENTRAL ---------------- */
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #0a0a0a, #1a0f2e 70%);
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+
+.main-video {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 50px #5e17eb55;
+    border: 2px solid #5e17eb;
+}
+
+/* Decorations autour de la vidéo */
+.decor-left, .decor-right {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 150px;
+    background: #5e17eb;
+    opacity: 0.3;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+.decor-left {
+    left: -40px;
+}
+
+.decor-right {
+    right: -40px;
+}
+
+/* Animation flottante style Aizen */
+@keyframes float {
+    0% { transform: translateY(-50%) translateX(0); opacity:0.3; }
+    50% { transform: translateY(-55%) translateX(5px); opacity:0.5; }
+    100% { transform: translateY(-50%) translateX(0); opacity:0.3; }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .decor-left, .decor-right {
+        display: none; /* plus simple sur mobile */
+    }
+}
+
+/* ------------------------ */
+/*       STYLE GLOBAL       */
+/* ------------------------ */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+
+
+/* ------------------------ */
+/*         HEADER           */
+/* ------------------------ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000;
+    border-bottom: 2px solid #5e17eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#logo h2 {
+    margin: 0;
+    color: #5e17eb;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #5e17eb;
+    transform: translateY(-3px);
+}
+
+
+
+/* ------------------------ */
+/*         HERO             */
+/* ------------------------ */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero video {
+    width: 80%;
+    max-width: 900px;
+    border: 3px solid #5e17eb;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #5e17eb;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-top: 30px;
+    color: #5e17eb;
+}
+
+.cta-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #5e17eb;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: white;
+    color: #5e17eb;
+    transform: scale(1.05);
+}
+
+
+
+/* ------------------------ */
+/*     SECTIONS GÉNÉRALES   */
+/* ------------------------ */
+
+section {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+section h2 {
+    color: #5e17eb;
+    font-size: 2.3rem;
+}
+
+
+
+/* ------------------------ */
+/*         CARDS            */
+/* ------------------------ */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #5e17eb;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #5e17eb;
+}
+
+
+
+/* ------------------------ */
+/*         FOOTER           */
+/* ------------------------ */
+
+footer {
+    background-color: #000;
+    padding: 40px;
+    text-align: center;
+    color: gray;
+    margin-top: 50px;
+}
+
+
+
+/* ------------------------ */
+/*     RESPONSIVE MOBILE    */
+/* ------------------------ */
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 8px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero video {
+        width: 95%;
+    }
+}
+
+
+
+
+
+
+/* Animation aura style Aizen */
+#logo h2 {
+    position: relative;
+    display: inline-block;
+    animation: pulseReiatsu 3s infinite ease-in-out;
+    text-shadow: 0 0 10px #5e17eb, 0 0 20px #5e17eb;
+}
+
+/* Aura externe */
+#logo h2::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #5e17eb;
+    border-radius: 8px;
+    opacity: 0.3;
+    animation: auraExpand 3s infinite;
+}
+
+/* Animation principale */
+@keyframes pulseReiatsu {
+    0%   { text-shadow: 0 0 10px #5e17eb; transform: scale(1); }
+    50%  { text-shadow: 0 0 25px #5e17eb; transform: scale(1.05); }
+    100% { text-shadow: 0 0 10px #5e17eb; transform: scale(1); }
+}
+
+/* Aura qui respire */
+@keyframes auraExpand {
+    0%   { transform: scale(1); opacity: 0.3; }
+    50%  { transform: scale(1.12); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 0.3; }
+}
+
+
+
+.cta-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #5e17eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 0 12px #5e17eb;
+}
+
+/* Effet Aizen au survol */
+.cta-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 22px #5e17eb, 0 0 32px #5e17eb;
+}
+
+
+
+/* INTRODUCTION MUSCULATION */
+.intro-musculation {
+    background-color: #0d0d0d;
+    border-left: 5px solid #5e17eb;
+    border-right: 5px solid #5e17eb;
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 0 0 20px #5e17eb;
+    animation: fadeInUp 1.8s forwards;
+    border-radius: 15px;
+}
+
+.intro-musculation h2 {
+    color: #5e17eb;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #5e17eb;
+}
+
+.intro-musculation p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* ANIMATION FADE UP */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .intro-musculation h2 {
+        font-size: 28px;
+    }
+    .intro-musculation p {
+        font-size: 16px;
+    }
+}
