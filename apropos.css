@@ -1,47 +1,46 @@
 /* GENERAL */
-.global-header {
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* HEADER */
+header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    padding: 20px 40px;
-    background-color: #000;
+    padding: 16px 40px;
+    background-color: #111;
     border-bottom: 2px solid #5e17eb;
 }
 
-/* LOGO */
-.header-logo a {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #5e17eb;
-    text-decoration: none;
-    line-height: 1.1;
-    text-shadow: 0 0 15px #5e17eb;
-    animation: pulseReiatsu 3s infinite ease-in-out;
-}
-
-/* NAV */
-.header-nav {
+header ul {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;          /* 🔥 retour à la ligne comme page principale */
-    justify-content: center;  /* 🔥 menu centré */
-    gap: 22px;
-    max-width: 800px;
+    gap: 25px;
 }
 
-.header-nav a {
+header a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
+    font-weight: 600;
     transition: 0.3s;
 }
 
-.header-nav a:hover,
-.header-nav a.active {
+header a:hover,
+header .active {
     color: #5e17eb;
 }
 
-/* ANIMATION LOGO */
+/* LOGO ANIMÉ */
+#logo h2 {
+    animation: pulseReiatsu 3s infinite ease-in-out;
+    text-shadow: 0 0 15px #5e17eb;
+}
+
 @keyframes pulseReiatsu {
     0% { text-shadow: 0 0 10px #5e17eb; }
     50% { text-shadow: 0 0 25px #5e17eb; }
@@ -150,4 +149,5 @@ footer {
         width: 200px;
     }
 }
+
 
