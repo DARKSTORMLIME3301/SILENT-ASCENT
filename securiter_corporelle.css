@@ -112,14 +112,28 @@ footer {
     border-top: 2px solid #5e17eb;
 }
 
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 12px;
-    }
+@media (max-width: 900px) {
+  .nav a {
+    margin-left: 15px;
+    font-size: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+}
 
-    .securite-section {
-        gap: 25px;
-    }
+/* RESPONSIVE TELEPHONE */
+@media (max-width: 600px) {
+  .header {
+    padding: 12px 20px;
+  }
+  .nav {
+    display: none; /* on peut activer un menu burger après */
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
 }
