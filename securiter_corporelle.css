@@ -35,10 +35,15 @@ header .active {
     color: #5e17eb;
 }
 
-/* LOGO ANIMÉ */
 #logo h2 {
+    color: white; /* BLANC par défaut */
     animation: pulseReiatsu 3s infinite ease-in-out;
-    text-shadow: 0 0 15px #5e17eb;
+    transition: color 0.3s ease;
+}
+
+/* Violet au hover */
+#logo:hover h2 {
+    color: #5e17eb;
 }
 
 @keyframes pulseReiatsu {
