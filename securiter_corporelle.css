@@ -123,3 +123,49 @@ footer {
         gap: 25px;
     }
 }
+
+
+/* ================= RESPONSIVE HEADER (COMME GLOSSAIRE, MAIS QUI MARCHE) ================= */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 14px 16px !important;
+  }
+
+  nav {
+    width: 100% !important;
+  }
+
+  header ul {
+    display: flex !important;
+    flex-wrap: wrap !important;          /* ✅ retour à la ligne */
+    justify-content: center !important;  /* ✅ centré */
+    gap: 12px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  header ul li {
+    list-style: none !important;
+  }
+
+  header ul li a {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    font-size: 0.95rem !important;
+    padding: 6px 8px !important;
+  }
+
+  #logo h2 {
+    text-align: center !important;
+    font-size: 1.4rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .securite-section {
+    gap: 25px;
+  }
+}
+
