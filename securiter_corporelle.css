@@ -35,15 +35,10 @@ header .active {
     color: #5e17eb;
 }
 
+/* LOGO ANIMÉ */
 #logo h2 {
-    color: white; /* BLANC par défaut */
     animation: pulseReiatsu 3s infinite ease-in-out;
-    transition: color 0.3s ease;
-}
-
-/* Violet au hover */
-#logo:hover h2 {
-    color: #5e17eb;
+    text-shadow: 0 0 15px #5e17eb;
 }
 
 @keyframes pulseReiatsu {
@@ -115,58 +110,4 @@ footer {
     padding: 20px;
     background-color: #111;
     border-top: 2px solid #5e17eb;
-}
-
-@media (max-width: 900px) {
-  .nav a {
-    margin-left: 15px;
-    font-size: 1rem;
-  }
-  .hero h1 {
-    font-size: 2.4rem;
-  }
-}
-
-/* TABLETTE */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 14px 20px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li a {
-        font-size: 0.95rem;
-    }
-}
-
-/* TELEPHONE */
-@media screen and (max-width: 480px) {
-    header {
-        padding: 12px 15px;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-
-    nav ul li a {
-        font-size: 0.9rem;
-        padding: 6px 8px;
-    }
-
-    #logo h2 {
-        font-size: 1.4rem;
-        text-align: center;
-        line-height: 1.1;
-    }
 }
