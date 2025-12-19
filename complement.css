@@ -47,7 +47,6 @@ header .active {
     100% { text-shadow: 0 0 10px #5e17eb; }
 }
 
-
 /* TITRE COMPLEMENTS */
 .complement-title {
     text-align: center;
@@ -131,5 +130,3 @@ footer {
         width: 90%;
     }
 }
-
-
