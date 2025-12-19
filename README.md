@@ -40,8 +40,8 @@ Le projet a pour objectif de promouvoir la musculation, la discipline et la prog
 Le site est hébergé via **GitHub Pages**.
 
 🔗 Lien du site :  
-👉 *(ajoute ici le lien GitHub Pages)*
+ https://darkstormlime3301.github.io/SILENT-ASCENT/
 
 ## 👤 Auteur
-Projet réalisé par **Hussein**  
+Projet réalisé par **Hussein ABDULRAHMAN**  
 Dans le cadre de la formation **BUT Réseaux & Télécommunications – SAÉ14**
