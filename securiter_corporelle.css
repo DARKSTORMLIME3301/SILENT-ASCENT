@@ -112,60 +112,56 @@ footer {
     border-top: 2px solid #5e17eb;
 }
 
-/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav a {
+    margin-left: 15px;
+    font-size: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* TABLETTE */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
-        gap: 12px;
+        align-items: center;
+        gap: 15px;
+        padding: 14px 20px;
     }
 
-    .securite-section {
-        gap: 25px;
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 0.95rem;
     }
 }
 
+/* TELEPHONE */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 12px 15px;
+    }
 
-/* ================= RESPONSIVE HEADER (COMME GLOSSAIRE, MAIS QUI MARCHE) ================= */
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-    padding: 14px 16px !important;
-  }
+    nav ul {
+        gap: 10px;
+    }
 
-  nav {
-    width: 100% !important;
-  }
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+    }
 
-  header ul {
-    display: flex !important;
-    flex-wrap: wrap !important;          /* ✅ retour à la ligne */
-    justify-content: center !important;  /* ✅ centré */
-    gap: 12px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  header ul li {
-    list-style: none !important;
-  }
-
-  header ul li a {
-    display: inline-block !important;
-    white-space: nowrap !important;
-    font-size: 0.95rem !important;
-    padding: 6px 8px !important;
-  }
-
-  #logo h2 {
-    text-align: center !important;
-    font-size: 1.4rem !important;
-    line-height: 1.1 !important;
-  }
-
-  .securite-section {
-    gap: 25px;
-  }
+    #logo h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 1.1;
+    }
 }
-
